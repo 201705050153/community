@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>汇智论坛</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/community.css">
+
+    <script src="js/bootstrap.min.js" type="application/javascript"> </script>
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">汇智论坛</a>
+        </div>
+
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+            <form class="navbar-form navbar-left">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="搜索问题">
+                </div>
+                <button type="submit" class="btn btn-default">搜索</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">登录</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">我 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">消息</a></li>
+                        <li><a href="#">其他</a></li>
+                        <li><a href="#">退出</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">退出</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+</nav>
+    <div class="container-fluid main">
+        <div class="row">
+            <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+                <h2><span class="glyphicon glyphicon glyphicon-plus" aria-hidden="true"></span> 发起</h2>
+
+                <form action="/publish">
+                    <div class="form-group">
+                        <label for="title">问题标题:</label>
+                        <input type="text" class="form-control" id="title" placeholder="问题标题...">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="title">问题补充:</label>
+                        <textarea name="description" id="description" class="form-control" cols="30" rows="25"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="title">添加标签:</label>
+                        <input type="text" class="form-control" id="tag" name="tag" placeholder="输入标签">
+                    </div>
+
+                    <button type="submit" class="btn btn-success btn-publish">发布</button>
+                </form>
+            </div>
+            <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                <h3>问题发起指南</h3>
+                <h4>• 问题标题:请用精简的语言描述您发布的问题，不超过25字</h4>
+                <h4>• 问题补充:详细补充您的问题内容，并确保问题描述清晰直观，并提供一些相关的资料:
+                    <h5>服务器运行环境信息;</h5>
+                    <h5>软件版本;</h5>
+                    <h5> 问题发生的上下文信息;</h5>
+                </h4>
+
+                <h4>可以完整复现问题的代码如可直接运行于 Kibana Console 的复现流程)﹔</h4>
+                <h4>补充完整的异常和错误信息; 注意阅读格式友好，代码和异常信息请用代码标签格式化张贴;</h4>
+                <h4>选择标签:选择一个或者多个合适的标签，不超过10个字</h4>
+                <h4>关于积分:发起一个问题会消耗您2个积分，每多一个回复你将获得5个积分的奖励，为了您的利益，在发起问题的时候希望能够更好的描述您的问题以及多使用站内搜索功能</h4>
+                <h4></h4>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
